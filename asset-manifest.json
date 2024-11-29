@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/timeline-block/static/css/main.879c1745.css",
+    "main.js": "/timeline-block/static/js/main.97c26f83.js",
+    "index.html": "/timeline-block/index.html",
+    "main.879c1745.css.map": "/timeline-block/static/css/main.879c1745.css.map",
+    "main.97c26f83.js.map": "/timeline-block/static/js/main.97c26f83.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.879c1745.css",
+    "static/js/main.97c26f83.js"
+  ]
+}
