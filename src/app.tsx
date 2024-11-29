@@ -1,24 +1,14 @@
 import React from 'react';
-import logo from './assets/icons/logo.svg';
-import {SApp, SHeader, SLink, SLogo} from "./assets/styles/app.styles";
+import './App.css';
+import { Provider } from 'react-redux';
+import HistoricalTimeline from './components/History';
+import { store } from './store/store';
 
 function App() {
     return (
-        <SApp>
-            <SHeader>
-                <SLogo src={logo} alt="logo"/>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <SLink
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </SLink>
-            </SHeader>
-        </SApp>
+        <Provider store={store}>
+            <HistoricalTimeline />
+        </Provider>
     );
 }
 
