@@ -14,7 +14,19 @@ import type { Swiper as SwiperInstance } from 'swiper';
 const Events = () => {
     const { slides, slidesContainerRef, isPrevButtonVisible, isNextButtonVisible, swiperRef, handleSlideChange } =
         useSwiperControls();
-
+    const swiperSlideStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        textAlign: 'left',
+        height: '135px',
+        '@media (max-width: 775px)': {
+            width: '100%',
+            padding: '0',
+            height: 'fit-content',
+            gap: '10px',
+        },
+    };
     return (
         <>
             <CEvents ref={slidesContainerRef}>
@@ -37,7 +49,7 @@ const Events = () => {
                     onSlideChange={handleSlideChange}
                 >
                     {slides.map(slide => (
-                        <SwiperSlide key={uuidv4()} className='custom-slide'>
+                        <SwiperSlide key={uuidv4()}>
                             <SlideWrapper>
                                 <Year>{slide.year}</Year>
                                 <Description>{slide.description}</Description>

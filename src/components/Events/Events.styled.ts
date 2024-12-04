@@ -13,7 +13,6 @@ export const SlideWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    width: 320px;
     height: 135px;
 
     @media (max-width: 775px) {
@@ -22,10 +21,11 @@ export const SlideWrapper = styled.div`
         height: fit-content;
         gap: 10px;
     }
-    .swiper-slide.custom-slide {
+    .swiper-slide.swiper-slide-active.custom-slide {
         @media (max-width: 775px) {
             width: 166px !important;
-            margin-right: 25px !important;
+            gap: 10px !important;
+            width: 100% !important;
         }
     }
 `;
