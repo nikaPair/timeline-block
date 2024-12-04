@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     text-align: center;
@@ -17,6 +20,10 @@ export const Container = styled.div`
         border-bottom: 1px solid #e2e5ec;
         max-height: 400px;
         gap: 20px;
+    }
+
+    @media (max-height: 700px, max-width: 775px) {
+        position: relative;
     }
 `;
 export const CYears = styled.div`
