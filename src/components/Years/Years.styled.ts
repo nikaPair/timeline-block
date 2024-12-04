@@ -1,23 +1,50 @@
 import styled from 'styled-components';
 
-export const CYears = styled.div`
+export const Container = styled.div`
+    position: relative;
     display: flex;
     justify-content: center;
-    position: relative;
     text-align: center;
     font-family: PT Sans;
-    max-width: 800px;
     margin: 0 auto;
     font-weight: 700;
     gap: 80px;
-    flex: 1.3;
     order: 2;
     align-items: center;
     z-index: 1;
+
     @media (max-width: 775px) {
         border-bottom: 1px solid #e2e5ec;
         max-height: 400px;
         gap: 20px;
+    }
+`;
+export const CYears = styled.div`
+    ::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 100vh;
+        background-color: #e2e5ec;
+        left: 50%;
+        top: 0;
+        @media (max-width: 775px) {
+            display: none;
+        }
+    }
+
+    ::after {
+        content: '';
+        position: absolute;
+        max-width: 1440px;
+        width: 100vw;
+        height: 1px;
+        background-color: #e2e5ec;
+        top: 50%;
+
+        @media (max-width: 775px) {
+            display: none;
+        }
     }
 `;
 export const StartYearP = styled.span`
@@ -48,20 +75,5 @@ export const SendYearP = styled.span`
     }
     @media (max-width: 550px) {
         font-size: 50px;
-    }
-`;
-export const Title = styled.p`
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 20px;
-    color: #42567a;
-    position: absolute;
-    top: -15%;
-    left: 79%;
-
-    @media (max-width: 775px) {
-        display: none;
     }
 `;
